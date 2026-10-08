@@ -1,7 +1,7 @@
 resource "aws_security_group" "main" {
   name        = local.common_name
   description = "Allow traffic for ${var.sg_name} ${var.project} in ${var.environment}"
-  vpc_id      = aws_vpc.main.id
+  vpc_id      = var.vpc_id
 
 
    egress {
